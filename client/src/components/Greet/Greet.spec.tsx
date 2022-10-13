@@ -29,10 +29,3 @@
 
 })
 
-describe('Nested',() => {
-  it('renders a Name',()=>{
-    render(<Greet name = 'Bruce Wayne'/>)
-    const element = screen.getByText('Hello Bruce Wayne');
-    expect(element).toBeInTheDocument();
-  })
-})

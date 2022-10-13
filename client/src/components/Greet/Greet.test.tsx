@@ -54,10 +54,15 @@ describe('greet grouping',() =>{
 
 })
 
-describe('Nested',() => {
-  test('renders a Name',()=>{
-    render(<Greet name = 'Bruce Wayne'/>)
-    const element = screen.getByText('Hello Bruce Wayne');
+
+
+
+
+
+describe("greet",() => {
+  test('renders correctly',()=>{
+    render(<Greet/>)
+    const element = screen.getByText(/hello/i) ;
     expect(element).toBeInTheDocument();
   })
 })
