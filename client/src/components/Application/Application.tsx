@@ -7,6 +7,7 @@ const Application = () => {
   <h2>Section form</h2>
   <p>All fields are mandatory</p>
   <img src = "https://via.placeholder.com/150" alt = "a person with the laptop"/>
+  <div data-testid="custom-element">Custom Html Element</div>
   <span title ="close">X</span>
     <form>
       <div>
@@ -23,7 +24,7 @@ const Application = () => {
         <textarea id ="bio" name = "bio"/>
       </div>
       <div>
-        <label htmlFor='job-location'>Name</label>
+        <label htmlFor='job-location'>Select a country</label>
         <select id = "job-location">
           <option value=""> select a country</option>
           <option value="IN"> India</option>
