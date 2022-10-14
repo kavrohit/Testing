@@ -52,6 +52,15 @@ describe('Application', () =>{
 
     const displayElement = screen.getByDisplayValue('J Cole');
     expect(displayElement).toBeInTheDocument();
+
+    const elementByAltText = screen.getByAltText('a person with the laptop');
+    expect(elementByAltText).toBeInTheDocument();
+
+    const closeElement = screen.getByTitle('close');
+    expect(closeElement).toBeInTheDocument();
+
+    const customElement = screen.getByTestId("custom element");
+    expect(customElement).toBeInTheDocument();
   })
 })
 

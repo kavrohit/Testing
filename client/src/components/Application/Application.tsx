@@ -6,6 +6,8 @@ const Application = () => {
   <h1>Job Application Form</h1>
   <h2>Section form</h2>
   <p>All fields are mandatory</p>
+  <img src = "https://via.placeholder.com/150" alt = "a person with the laptop"/>
+  <span title ="close">X</span>
     <form>
       <div>
         <label htmlFor='name'>Name</label>
