@@ -62,8 +62,6 @@ describe('counter test',()=>{
     await user.tab()
     expect(setElement).toHaveFocus();
     
-     
-    
   })
 
 })
