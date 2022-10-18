@@ -1,8 +1,7 @@
 import {render, screen} from "@testing-library/react"
 import {rest} from 'msw'
 import { server } from "../../mocks/server";
-
-import { Users } from "./users"
+import {Users} from './Users'
 
 describe("Users",() =>{
   test("renders correctly",()=>{
@@ -13,20 +12,20 @@ describe("Users",() =>{
     expect(textElement).toBeInTheDocument();
   })
 
-  test('renders users',async()=>{
+  test('renders users',async () => {
     render(<Users/>)
     const users = await screen.findAllByRole('listitem');
-    expect(users).toHaveLength(3);
+    expect(users).toHaveLength(5);
   })
   
-  test('error handling',async ()=>{
+  test('error handling',async () => {
     server.use(
-      rest.get('https://jsonplaceholder.typeicode.com/users',(req,res,ctx) =>{
+      rest.get('https://jsonplaceholder.typicode.com/users',(req,res,ctx) => {
         return res(ctx.status(500))
       })
     );
     render(<Users/>);
-    const error = await screen.findByText('Error fetching users');
+    const error  = await screen.findByText('Error fetching users');
     expect(error).toBeInTheDocument();
   });
 })

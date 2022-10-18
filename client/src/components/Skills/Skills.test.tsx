@@ -1,5 +1,4 @@
 import {screen,render, logRoles} from "@testing-library/react"
-import Counter from "../Counter/Counter";
 import { Skills } from "./Skills"
 
 
@@ -35,8 +34,8 @@ describe('Skills',()=>{
   })
 
   test('start learning button is eventually displayed',async()=>{
-   const view = render(<Skills skills={skills}/>)
-  //  logRoles(view.container)
+   render(<Skills skills={skills}/>)
+   //  logRoles(view.container)
     // screen.debug();
     const DisapperingLoginButton = await screen.findByRole("button",{
       name:"Start Learning"

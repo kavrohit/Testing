@@ -4,7 +4,7 @@ export const CounterTwo = (props:CounterTwoProps) =>{
   return(
     <div>
       <h1>Counter Two </h1>
-      <h2>{props.count}</h2>
+      <p>{props.count}</p>
       {
         props.handleIncrement && (
           <button onClick={props.handleIncrement}>Increment</button>

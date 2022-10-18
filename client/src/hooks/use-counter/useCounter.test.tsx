@@ -1,7 +1,7 @@
 import { renderHook ,act} from '@testing-library/react'
 import {useCounter} from './useCounter';
 
-describe ('useCounter',()=>{
+describe ('test Use counter',()=>{
   test('should render the initial count',()=>{
    const { result } = renderHook(useCounter);
    //current is a property which will contain all the values from custom hooks

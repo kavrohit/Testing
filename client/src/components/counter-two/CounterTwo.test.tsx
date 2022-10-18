@@ -9,7 +9,7 @@ describe('Counter Two',()=>{
     expect(textElement).toBeInTheDocument();
   });
 
-  test('handlers are called',async() =>{
+  test('handlers are called',async() => {
     user.setup();
     const incrementHandler = jest.fn();
     const decrementHandler = jest.fn();
